@@ -32,7 +32,7 @@ jobs:
       working-directory: dlib/test
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
     - name: Test
-      working-directory: dlib/test/build
+      working-directory: ${{github.workspace}}/build
       run: ./dtest --runall
       
 
